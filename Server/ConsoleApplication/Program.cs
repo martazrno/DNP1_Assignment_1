@@ -1,14 +1,14 @@
 ﻿using ConsoleApplication.UI.ManageComments;
 using ConsoleApplication.UI.ManageUsers;
-using InMemoryRepositories;
+using FileRepositories;
 
 class Program
 {
     static async Task Main()
     {
-        var userRepository = new UserInMemoryRepository();
-        var postRepository = new PostInMemoryRepository();
-        var commentRepository = new CommentInMemoryRepository();
+        var userRepository = new UserFileRepository();
+        var postRepository = new PostFileRepository();
+        var commentRepository = new CommentFileRepository();
 
         var manageUsers = new ManageUserView(userRepository);
         var managePosts = new ManagePostsView(postRepository);
